@@ -21,10 +21,8 @@ module.exports = function toReadable (number) {
     return number !== 18 ? arr[number - 11] + 'teen' : 'eighteen';
   } else if (number.toString().length === 2 && number < 30) {
 
-
     return number !== 20 ? 'twenty ' + arr[secondDigit - 1] : 'twenty';
   } else if (number.toString().length === 2 && number < 40) {
-
 
     return number !== 30 ? 'thirty ' + arr[secondDigit - 1] : 'thirty';
   } else if (number.toString().length === 2 && number < 60) {
@@ -40,7 +38,7 @@ module.exports = function toReadable (number) {
 
     return arr[firstDigit - 1] + 'ty ' + arr[secondDigit - 1]
 
-  } else if (number.toString().length === 3 && number < 1000) {
+  } else if (number.toString().length === 3) {
     if (+secondDigit + +thirdDigit === 0) {
         return arr[firstDigit - 1] + ' hundred';
     } else if (+secondDigit === 0) {
